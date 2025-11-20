@@ -1,0 +1,88 @@
+#1
+'''
+users = ['admin', 'operator']
+users.append(input())
+print(users)
+'''
+#2
+'''
+users = ['root', 'security']
+users.insert(0, input())
+print(users)
+'''
+#3
+'''
+users = ['alice', 'bob', 'charlie']
+users.remove(input())
+print(users)
+'''
+#4
+'''
+logs = ['Access granted', 'Login failed', 'Connection lost']
+last_log = logs.pop()
+print("Последняя запись:", last_log)
+print("Оставшиеся логи:", logs)
+'''
+#5
+'''
+attempts = ['ok', 'error', 'ok', 'error', 'error']
+print("Количество ошибок входа:", attempts.count('error'))
+'''
+#6
+'''
+logs = ['Access ok', 'Breach detected', 'System reboot', 'Breach detected']
+print("Первое обнаружение вторжения на позиции:", logs.index('Breach detected'))
+'''
+#7
+'''
+levels = [3, 1, 2, 3, 1, 2]
+levels.sort()
+print(levels)
+'''
+#8
+'''
+reports = ['2025-10-01', '2025-10-02', '2025-10-03']
+reports.reverse()
+print(reports)
+'''
+#9
+'''
+logs = ["alert", "spam", "login", "error", "spam", "alert"]
+
+while "spam" in logs:
+    logs.remove("spam")
+
+logs.append("END_LOG")
+logs.reverse()
+print("Журнал после очистки:", logs)
+print("Количество 'alert':", logs.count("alert"))
+'''
+#10
+'''
+whitelist = ['192.168.0.1', '192.168.0.2', '192.168.0.3', '192.168.0.4', '192.168.0.5']
+
+ip_to_remove = input("Введите IP для удаления: ")
+ip_new = input("Введите новый IP: ")
+
+whitelist.remove(ip_to_remove)
+whitelist.insert(2, ip_new)
+whitelist.sort()
+print("Обновлённый белый список:", whitelist)
+print("Индекс нового IP:", whitelist.index(ip_new))
+'''
+#11
+'''
+attempts = ['ok', 'fail', 'fail', 'ok', 'fail']
+
+fail_count = attempts.count('fail')
+
+while 'fail' in attempts:
+    attempts.remove('fail')
+
+attempts.append('audit_completed')
+attempts.reverse()
+
+print("Количество неудачных входов:", fail_count)
+print("Итоговый список:", attempts)
+print("Первый индекс 'ok':", attempts.index('ok'))
+'''
